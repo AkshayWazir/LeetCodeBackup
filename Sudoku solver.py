@@ -26,14 +26,11 @@ def v_c(col, num):
 def b_c(row, col, num):
     s_r = (row // 3) * 3
     s_c = (col // 3) * 3
-    temp = []
     for tr in range(s_r, s_r + 3):
         for tc in range(s_c, s_c + 3):
-            temp.append(sudoku[tr][tc])
-    if num in temp:
-        return True
-    else:
-        return False
+            if num == sudoku[tr][tc]:
+                return True
+    return False
 
 
 # Now we will check and feed the empty Sudoku matrix
