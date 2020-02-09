@@ -24,4 +24,5 @@ def find(node, target, count, res, go):
             master[str(node.right)] = str(node.val)
     return res
 
+
 master = {}
