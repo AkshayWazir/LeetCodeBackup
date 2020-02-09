@@ -18,8 +18,12 @@ def give_node(node, target):
     if stat1 and stat:
         return [True, node.val]
     elif stat1:
+        if node.val in target:
+            return [True, node.val]
         return [stat1, val1]
     elif stat:
+        if node.val in target:
+            return [True, node.val]
         return [stat, val]
     else:
         if node.val in target:
@@ -35,4 +39,4 @@ a.left.left = Node(30)
 a.left.right = Node(40)
 a.left.right.left = Node(50)
 a.left.right.right = Node(60)
-print(give_node(a, [30, 60]))
+print(give_node(a, [40, 60]))
