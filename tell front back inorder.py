@@ -1,4 +1,5 @@
 import makeBST
+from makeTree import make_tree
 
 
 def give_in_order(node):
@@ -7,6 +8,6 @@ def give_in_order(node):
     return give_in_order(node.left) + [node.val] + give_in_order(node.right)
 
 
-arr = [1, 2, 3, 4, 5, 6, 7]
-res = makeBST.make_bst(0, len(arr) - 1, arr)
+arr = [4, 2, 6, 1, None, 5, None]
+res = make_tree(arr)
 print(give_in_order(res))
